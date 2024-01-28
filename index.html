@@ -302,19 +302,47 @@
                 </div>
                 <div class="col">
                   <ul class="nav nav-pills justify-content-end">
-                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[4,3,0,3,3,2,0,-2,-1,11]}]}}' data-prefix="" data-suffix="°C">
+                    <li class="nav-item mr-2 mr-md-0"
+                        data-toggle="chart"
+                        data-target="#chart-sales"
+                        data-update='{
+                          "data":{
+                            "labels": [" 10:59:50",  " 10:59:52" ,  " 10:59:54" ,  " 10:59:56" ,  " 10:59:58" ,  " 11:00:00" ,  " 11:00:02" ,  " 11:00:04" ],
+                            "datasets":[{"data":[4,3,0,3,3,2,0,-2,-1,11]}]
+                          }
+                        }'
+                        data-prefix=""
+                        data-suffix="°C">
                       <a href="#" class="nav-link py-2 px-3 active" data-toggle="tab">
                         <span class="d-none d-md-block">Nhiệt độ</span>
                         <span class="d-md-none">T</span>
                       </a>
                     </li>
-                    <li class="nav-item mr-2 mr-md-0" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[85.5,90,70,89,50,76,100,2,84.1,83]}]}}' data-prefix="" data-suffix="%">
+                    <li class="nav-item mr-2 mr-md-0"
+                        data-toggle="chart"
+                        data-target="#chart-sales"
+                        data-update='{
+                          "data":{
+                            "datasets":[{"data":[85.5,90,70,89,50,76,100,2,84.1,83]}]
+                          }
+                        }'
+                        data-prefix=""
+                        data-suffix="%">
                       <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
                         <span class="d-none d-md-block">Độ ẩm</span>
                         <span class="d-md-none">H</span>
                       </a>
                     </li>
-                    <li class="nav-item" data-toggle="chart" data-target="#chart-sales" data-update='{"data":{"datasets":[{"data":[90,100,100,98,100,100,98,100,97,95]}]}}' data-prefix="$" data-suffix="k">
+                    <li class="nav-item" 
+                      data-toggle="chart" 
+                      data-target="#chart-sales" 
+                      data-update='{
+                        "data":{
+                          "datasets":[{"data":[90,100,100,98,100,100,98,100,97,95]}]
+                        }
+                      }' 
+                      data-prefix=""
+                      data-suffix="lux">
                       <a href="#" class="nav-link py-2 px-3" data-toggle="tab">
                         <span class="d-none d-md-block">Ánh sáng</span>
                         <span class="d-md-none">L</span>
@@ -578,7 +606,7 @@
     window.TrackJS &&
       TrackJS.install({
         token: "ee6fab19c5a04ac1a32a645abde4613a",
-        application: "argon-dashboard-free"
+        application: "chasen-iot-free"
       });
   </script>
 </body>

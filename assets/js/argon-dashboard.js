@@ -1071,9 +1071,10 @@ var SalesChart = (function() {
               zeroLineColor: Charts.colors.gray[900]
             },
             ticks: {
+              // stepSize: 5,
               callback: function(value) {
                 if (!(value % 10)) {
-                  return '$' + value + 'k';
+                  return value ;
                 }
               }
             }
@@ -1090,14 +1091,14 @@ var SalesChart = (function() {
                 content += '<span class="popover-body-label mr-auto">' + label + '</span>';
               }
 
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              content += '<span class="popover-body-value">' + yLabel + '</span>';
               return content;
             }
           }
         }
       },
       data: {
-        labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        labels: [' 10:59:50', ' 10:59:52', ' 10:59:54', ' 10:59:56', ' 10:59:58', ' 11:00:00', ' 11:00:02', ' 11:00:04'],
         datasets: [{
           label: 'Performance',
           data: [0, 20, 10, 30, 15, 40, 20, 60, 60]
