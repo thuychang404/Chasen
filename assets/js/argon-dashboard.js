@@ -1100,29 +1100,31 @@ var SalesChart = (function() {
             }
           }
         },
+
         legend: {
           display: true,
-          position: 'top',
+          position: 'bottom',
           labels: {
-            boxWidth: 80,
-            fontColor: 'black'
+            boxWidth: 100,
+            
+            // fontColor: 'white'
           }
         }
       },
       data: {
         labels: xValues,
         datasets: [{ 
-          label: "NĐ",
+          label: "Nhiệt độ",
           data: [4,3,0,3,3,2,0,-2,-1,11],
           borderColor: "red",
           fill: false
         }, { 
-          label: "ĐÂ",
+          label: "Độ ẩm",
           data: [85.5,90,70,89,50,76,100,2,84.1,83],
           borderColor: "blue",
           fill: false
         }, { 
-          label: "AS",
+          label: "Ánh sáng",
           data: [90,100,100,98,100,100,98,100,97,95],
           borderColor: "yellow",
           fill: false
