@@ -24,6 +24,7 @@
   <script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
+
 </head>
 
 <body class="">
@@ -145,18 +146,18 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-email-83"></i> Gmail
+            <a class="nav-link" href="mailto:tttt.tranthithuytrang@gmail.com? cc:thuytrangsutu12345@gmail.com" target="_blank">
+               Gmail
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-facebook-f"></i> Facebook
+            <a class="nav-link" href="https://www.facebook.com/thuychang404" target="_blank">
+               Facebook
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/thuychang404/Chasen.git" target="_blank">
-              <i class="fas fa-github"></i> Github
+               Github
             </a>
           </li>
         </ul>
@@ -297,7 +298,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </div>
     <div class="container-fluid mt--7">
       <div class="row">
-        <div class="col-xl-8 mb-5 mb-xl-0">
+        <div class="col-xl-9 mb-5 mb-xl-0">
           <div class="card bg-gradient-default shadow">
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
@@ -367,7 +368,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
+        <div class="col-xl-3">
           <div class="card shadow">
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
@@ -387,10 +388,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                   <span class="h2 font-weight-bold mb-0">Đèn</span>
                 </div>
                 <div class="col-auto">
-                  <div class="icon icon-shape bg-red text-white rounded-circle shadow">
-                    <a class="light-off pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="./assets/img/icons/light-off.png" alt="light-off" style="filter: brightness(0) invert(1);">
-                    </a>
+                  <div id="lightButton" class="icon icon-shape bg-red text-white rounded-circle shadow" onclick="toggleImage()">
+                      <img id="lightImage" src="./assets/img/icons/light-off.png" alt="light-off" class="light" style="filter: brightness(0) invert(1);">
                     <!-- <img src="./assets/img/icons/light-on.png" alt="light-on" style="filter: brightness(0) invert(1);"> -->
                     <!-- <img src="./assets/img/icons/light-off.png" alt="light-off" style="filter: brightness(0) invert(1);"> -->
                   </div>
@@ -407,7 +406,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                   <span class="h2 font-weight-bold mb-0">Quạt</span>
                 </div>
                 <div class="col-auto">
-                  <div class="icon icon-shape bg-green text-white rounded-circle shadow">
+                  <div id="fanButton" class="icon icon-shape bg-red text-white rounded-circle shadow" onclick="toggleClasses()">
                     <img src="./assets/img/icons/fan.png" alt="fan-off" class="fan" style="filter: brightness(0) invert(1);">
                   </div>
                 </div>
@@ -619,7 +618,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       });
   </script>
 
-<script>
+<!-- <script>
   const xValues = [" 10:59:50",  " 10:59:52" ,  " 10:59:54" ,  " 10:59:56" ,  " 10:59:58" ,  " 11:00:00" ,  " 11:00:02" ,  " 11:00:04" ];
   
   new Chart("myChart", {
@@ -644,7 +643,49 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       legend: {display: false}
     }
   });
-  </script>
+  </script> -->
+
+  <script>
+    function toggleClasses() {
+      var div = document.getElementById("fanButton");
+      
+    
+      // Kiểm tra xem div có class "on" hay không
+      if (div.classList.contains('on')) {
+        // Nếu có, loại bỏ class "on" và thêm class "off"
+        div.classList.remove('on');
+        div.classList.add('off');
+        // Thay đổi class từ "bg-green" sang "bg-red"
+        div.classList.remove('bg-green');
+        div.classList.add('bg-red');
+      } else {
+        // Nếu không, loại bỏ class "off" và thêm class "on"
+        div.classList.remove('off');
+        div.classList.add('on');
+        // Thay đổi class từ "bg-red" sang "bg-green"
+        div.classList.remove('bg-red');
+        div.classList.add('bg-green');
+      }
+    }
+
+    function toggleImage() {
+  var img = document.getElementById("lightImage");
+  var some = document.getElementById("lightButton");
+
+  // Kiểm tra xem src của ảnh có chứa "light-off.png" hay không
+  if (img.src.includes('light-off.png')) {
+    // Nếu có, thay đổi src thành "light-on.png"
+    img.src = "./assets/img/icons/light-on.png";
+    some.classList.remove('bg-red');
+    some.classList.add('bg-green');
+  } else {
+    // Nếu không, thay đổi src thành "light-off.png"
+    img.src = "./assets/img/icons/light-off.png";
+    some.classList.remove('bg-green');
+    some.classList.add('bg-red');
+  }
+}
+    </script>
 </body>
 
 </html>

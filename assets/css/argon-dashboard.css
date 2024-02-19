@@ -20704,7 +20704,7 @@ pre>code.highlight {
 }
 
 /* call animation */
-.fan {
+.on{
   animation: xoayvong 2s linear 0s infinite;
   -webkit-animation: xoayvong 2s linear 0s infinite;
   -moz-animation: xoayvong 2s linear 0s infinite;

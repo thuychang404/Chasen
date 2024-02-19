@@ -23,6 +23,29 @@
   <!-- Tables CSS -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 
+    <!-- Data Table JS -->
+      <!-- <script>
+        $(document).ready(function(){
+         var baseurl = "http://localhost:8080/persons";
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.open("GET",baseurl+"/all",true);
+         xmlhttp.onreadystatechange = function(){
+           if(xmlhttp.readyState==4 && xmlhttp.status ==200){
+             var persons = JSON.parse(xmlhttp.responseText);
+             $("#dataSensor-table").DataTable({
+              data:persons,
+              "columns":[
+                {"data":"id"},
+                {"data":"firstName"},
+                {"data":"lastName"},
+                {"data":"age"}
+              ]
+             });
+           }
+         };
+         xmlhttp.send();
+        });
+      </script>   -->
 </head>
 
 <body class="">
@@ -144,18 +167,18 @@
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="ni ni-email-83"></i> Gmail
+            <a class="nav-link" href="mailto:tttt.tranthithuytrang@gmail.com? cc:thuytrangsutu12345@gmail.com" target="_blank">
+               Gmail
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-facebook-f"></i> Facebook
+            <a class="nav-link" href="https://www.facebook.com/thuychang404" target="_blank">
+               Facebook
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/thuychang404/Chasen.git" target="_blank">
-              <i class="fas fa-github"></i> Github
+               Github
             </a>
           </li>
         </ul>
@@ -235,7 +258,8 @@
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
-              <table id="dataSensor-table" class="table align-items-center table-flush">
+              <!-- <table id="example" class="table align-items-center table-flush"> -->
+              <table id="example" class="table align-items-center table-flush" style="width: 100%;">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">ID</th>
@@ -273,7 +297,7 @@
                       84.1
                     </td>
                     <td>
-                      <!-- <i class="fas fa-arrow-down text-warning mr-3"></i> 46,53% -->
+                      
                       100
                     </td>
                   </tr>
@@ -401,8 +425,6 @@
                 </tbody>
               </table>
 
-              <div class="toggleButton" data-target="table1">1</div>
-              <div class="toggleButton" data-target="table2">2</div>
             </div>
           </div>
         </div>
@@ -435,8 +457,12 @@
         application: "argon-dashboard-free"
       });
   </script>
-
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+  
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/2.0.0/js/dataTables.js "></script>
+  <script>
+      new DataTable('#example');
+  </script>
 </body>
 
 </html>
