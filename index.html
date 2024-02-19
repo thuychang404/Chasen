@@ -305,7 +305,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                   <h6 class="text-uppercase text-light ls-1 mb-1">Tổng quan</h6>
                   <h2 class="text-white mb-0">Số đo đo lường</h2>
                 </div>
-                <div class="col">
+                <!-- <div class="col">
                   <ul class="nav nav-pills justify-content-end">
                     <li class="nav-item mr-2 mr-md-0"
                         data-toggle="chart"
@@ -354,13 +354,14 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="card-body">
               <!-- Chart -->
               <div class="chart">
                 <!-- Chart wrapper -->
+                <!-- <canvas id="myChart" class="chart-canvas"></canvas> -->
                 <canvas id="chart-sales" class="chart-canvas"></canvas>
               </div>
             </div>
@@ -608,7 +609,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
   <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
   <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
   <!--   Argon JS   -->
-  <script src="./assets/js/argon-dashboard.min.js?v=1.1.2"></script>
+  <script src="./assets/js/argon-dashboard.js?v=1.1.2"></script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&
@@ -617,7 +618,33 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         application: "chasen-iot-free"
       });
   </script>
+
+<script>
+  const xValues = [" 10:59:50",  " 10:59:52" ,  " 10:59:54" ,  " 10:59:56" ,  " 10:59:58" ,  " 11:00:00" ,  " 11:00:02" ,  " 11:00:04" ];
   
+  new Chart("myChart", {
+    type: "line",
+    data: {
+      labels: xValues,
+      datasets: [{ 
+        data: [23,23,23,23,23,23,23,23,23,23],
+        borderColor: "red",
+        fill: false
+      }, { 
+        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+        borderColor: "blue",
+        fill: false
+      }, { 
+        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+        borderColor: "yellow",
+        fill: false
+      }]
+    },
+    options: {
+      legend: {display: false}
+    }
+  });
+  </script>
 </body>
 
 </html>

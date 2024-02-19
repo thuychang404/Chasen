@@ -1054,7 +1054,11 @@ var SalesChart = (function() {
   // Variables
 
   var $chart = $('#chart-sales');
+  const xValues = [" 10:59:50",  " 10:59:52" ,  " 10:59:54" ,  " 10:59:56" ,  " 10:59:58" ,  " 11:00:00" ,  " 11:00:02" ,  " 11:00:04" ];
 
+  // Chart.defaults.global.defaultFontFamily = "Lato";
+  // Chart.defaults.global.defaultFontSize = 18;
+  // Chart.defaults.global.defaultColor = "white";
 
   // Methods
 
@@ -1095,13 +1099,33 @@ var SalesChart = (function() {
               return content;
             }
           }
+        },
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 80,
+            fontColor: 'black'
+          }
         }
       },
       data: {
-        labels: [' 10:59:50', ' 10:59:52', ' 10:59:54', ' 10:59:56', ' 10:59:58', ' 11:00:00', ' 11:00:02', ' 11:00:04'],
-        datasets: [{
-          label: 'Performance',
-          data: [0, 20, 10, 30, 15, 40, 20, 60, 60]
+        labels: xValues,
+        datasets: [{ 
+          label: "NĐ",
+          data: [4,3,0,3,3,2,0,-2,-1,11],
+          borderColor: "red",
+          fill: false
+        }, { 
+          label: "ĐÂ",
+          data: [85.5,90,70,89,50,76,100,2,84.1,83],
+          borderColor: "blue",
+          fill: false
+        }, { 
+          label: "AS",
+          data: [90,100,100,98,100,100,98,100,97,95],
+          borderColor: "yellow",
+          fill: false
         }]
       }
     });
