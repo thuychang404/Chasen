@@ -19,6 +19,10 @@
   <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="./assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+
+  <!-- Tables CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+
 </head>
 
 <body class="">
@@ -215,7 +219,7 @@
     </nav>
     <!-- End Navbar -->
     <!-- Header -->
-    <div class="header bg-gradient-indigo pb-8 pt-5 pt-md-8">
+    <div class="header bg-gradient-indigo pb-2 pt-5 pt-md-8">
 
     </div>
     <div class="container-fluid mt--7">
@@ -231,9 +235,10 @@
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
-              <table class="table align-items-center table-flush">
+              <table id="dataSensor-table" class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
+                    <th scope="col">ID</th>
                     <th scope="col">Thời gian</th>
                     <th scope="col">Nhiệt độ</th>
                     <th scope="col">Độ ẩm</th>
@@ -242,6 +247,7 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 11:00:04 
                     </th>
@@ -256,6 +262,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 11:00:02
                     </th>
@@ -271,6 +278,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 11:00:00
                     </th>
@@ -285,6 +293,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:58
                     </th>
@@ -299,6 +308,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:56
                     </th>
@@ -313,6 +323,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:54
                     </th>
@@ -328,6 +339,7 @@
                   </tr>
 
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:54
                     </th>
@@ -342,6 +354,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:54
                     </th>
@@ -356,6 +369,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:54
                     </th>
@@ -370,6 +384,7 @@
                     </td>
                   </tr>
                   <tr>
+                    <td>1</td>
                     <th scope="row">
                       28/01/2024 10:59:54
                     </th>
@@ -385,6 +400,9 @@
                   </tr>
                 </tbody>
               </table>
+
+              <div class="toggleButton" data-target="table1">1</div>
+              <div class="toggleButton" data-target="table2">2</div>
             </div>
           </div>
         </div>
@@ -417,6 +435,8 @@
         application: "argon-dashboard-free"
       });
   </script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 </body>
 
 </html>

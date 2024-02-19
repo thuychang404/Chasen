@@ -20710,3 +20710,9 @@ pre>code.highlight {
   -moz-animation: xoayvong 2s linear 0s infinite;
   -o-animation: xoayvong 2s linear 0s infinite; 
 }
+
+.toggleButton {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
