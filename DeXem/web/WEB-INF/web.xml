@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>findservlet</servlet-name>
+        <servlet-class>Controller.findservlet</servlet-class>
+    </servlet>
+<!--    <servlet>
+        <servlet-name>getHistoryDevices</servlet-name>
+        <servlet-class>Controller.getHistoryDevices</servlet-class>
+    </servlet>-->
+    <servlet-mapping>
+        <servlet-name>getServlet</servlet-name>
+        <url-pattern>/getServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getServlet</servlet-name>
+        <servlet-class>Controller.getServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addservlet</servlet-name>
+        <servlet-class>Controller.addservlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>addservlet</servlet-name>
+        <url-pattern>/addservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>findservlet</servlet-name>
+        <url-pattern>/findservlet</url-pattern>
+    </servlet-mapping>
+<!--    <servlet-mapping>
+        <servlet-name>getHistoryDevices</servlet-name>
+        <url-pattern>/getHistoryDevices</url-pattern>
+    </servlet-mapping>-->
+</web-app>
