@@ -77,6 +77,6 @@ Với các dòng máy khác, kết quả được kỳ vọng không thay đổi
 > ![image](https://github.com/thuychang404/Chasen/assets/130899126/c95410eb-9651-4fc3-8139-05e08829be91)
 
 ## Hỗ trợ
-During using the application, if you encounter any problems, feel free to get in touch me through Facebook or Gmail. I always welcome questions. Otherwise you can rise issues through [Issues]() channel if needed. I will leave my Facebook links below.
+During using the application, if you encounter any problems, feel free to get in touch me through Facebook or Gmail. I always welcome questions. Otherwise you can rise issues through [Issues](https://github.com/thuychang404/Chasen/issues/new) channel if needed. I will leave my Facebook links below.
 [Facebook](https://facebook.com/thuychang404) and 
 [Gmail](mailto:tttt.tranthithuytrang@gmail.com)
