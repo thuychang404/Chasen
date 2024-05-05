@@ -26,6 +26,19 @@ Website đưa các dữ liệu từ chip ESP8266 vào database, thông qua backe
 
 
 ## Cách cài đặt
+### ESP8266
+1. Chuẩn bị các thiết bị sau:
+- ESP8266
+- DHT11/DHT22
+- Cảm biến ánh sáng
+- Breadboard
+- Dây điện
+- 2 đèn led 3V/5V
+2. Lắp vào breadboard.
+3. Tải Arduino về [tại đây]().
+4. Kết nối mạch ESP8266 vào laptop qua cổng USB, nạp vào mạch file :
+
+
 ### Database
 1. Cài đặt MySQL Workbrench và các dịch vụ đi kèm [tại đây](https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html).
 2. Mở Workbrench, nhập các queries trong thư mục SQL.
@@ -45,4 +58,5 @@ Website đưa các dữ liệu từ chip ESP8266 vào database, thông qua backe
 > ![image](https://github.com/thuychang404/Chasen/assets/130899126/b733fec1-0d0a-434f-ae1a-ece22b517dc8)
 
 ### Frontend
-1. Cài đặt 
+1. Cài đặt Visual Studio Code [tại đây]().
+2. Cài đặt extension Live Server
