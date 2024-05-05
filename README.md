@@ -36,8 +36,8 @@ Website đưa các dữ liệu từ chip ESP8266 vào database, thông qua backe
 - 2 đèn led 3V/5V
 2. Lắp vào breadboard.
 3. Tải Arduino về [tại đây]().
-4. Kết nối mạch ESP8266 vào laptop qua cổng USB, nạp vào mạch file :
-
+4. Kết nối mạch ESP8266 vào laptop qua cổng USB, nạp vào mạch  [```ESP8266_DHT11_LS_2LED_mqtt-client.ino```]().
+5. Chọn Compile &- Upload.
 
 ### Database
 1. Cài đặt MySQL Workbrench và các dịch vụ đi kèm [tại đây](https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html).
